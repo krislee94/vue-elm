@@ -23,7 +23,7 @@
   >
 
   <!-- 注册 -->
-  <p href="">注册</p>
+  <p href="" class="register-style">注册</p>
 </template>
 
 <script>
@@ -40,6 +40,12 @@ export default defineComponent({
     };
   },
   setup() {},
+  watch: {
+    $route: (to, from) => {
+      console.log(to);
+      console.log(from);
+    },
+  },
   methods: {
     async login() {
       //点击登录
@@ -47,7 +53,7 @@ export default defineComponent({
       console.log(this.inputPassword);
       const hash = md5(this.inputPassword);
       console.log(hash);
-
+      this.$router.push("/home");
       //密码是否需要用md5加密。
     },
   },
@@ -72,8 +78,12 @@ export default defineComponent({
   margin-top: 100px;
 }
 .login-button {
-  width: 800px;
+  width: 1000px;
   height: 200px;
   margin-top: 100px;
+}
+.register-style :hover {
+  color: aquamarine;
+  cursor: pointer;
 }
 </style>
