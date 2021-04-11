@@ -1,6 +1,7 @@
 import "element3/lib/theme-chalk/index.css";
 import Element3 from "element3";
 import router from "./router/router";
+import "./assets/icons/iconfont.css";
 
 //createApp模块是创建一个应用
 import { createApp } from "vue";

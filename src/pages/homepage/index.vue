@@ -1,23 +1,31 @@
 <template>
-  <h1>这个是首页</h1>
+  <div>
+    <h1>这个是首页</h1>
+    <!-- <i class="iconfont remen" /> -->
+    <Navigation />
+  </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-export default defineComponent({
+// import { defineComponent } from "vue";
+import Navigation from "../../components/navigation.vue";
+export default {
   name: "Home",
-  props: {},
-  data() {
-    return {};
+  components: {
+    Navigation,
   },
-  setup() {},
+  props: {},
+  // data() {
+  //   return {};
+  // },
   watch: {
     $route: (to, from) => {
       console.log(to);
       console.log(from);
     },
   },
-});
+  setup() {},
+};
 </script>
 
 <style>

@@ -39,6 +39,33 @@ const routes = [
     component: () =>
       Promise.resolve().then(() => import("../components/login/login.vue")),
   },
+  {
+    path: "/find",
+    name: "Find",
+    meta: {
+      title: "发现",
+    },
+    component: () =>
+      Promise.resolve().then(() => import("../pages/find/index.vue")),
+  },
+  {
+    path: "/order",
+    name: "Order",
+    meta: {
+      title: "订单",
+    },
+    component: () =>
+      Promise.resolve().then(() => import("../pages/order/index.vue")),
+  },
+  {
+    path: "/my",
+    name: "My",
+    meta: {
+      title: "我的",
+    },
+    component: () =>
+      Promise.resolve().then(() => import("../pages/mine/index.vue")),
+  },
 ];
 
 const router: Router = createRouter({
