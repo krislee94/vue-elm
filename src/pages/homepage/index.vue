@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>这个是首页</h1>
-    <!-- <i class="iconfont remen" /> -->
+    <i class="iconfont icon-gonggao"></i>
     <Navigation />
   </div>
 </template>
