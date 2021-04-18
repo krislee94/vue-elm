@@ -1,6 +1,8 @@
 <template>
-  <h1>这是订单页</h1>
-  <Navigation />
+  <div>
+    <h1>这是订单页</h1>
+    <Navigation />
+  </div>
 </template>
 
 <script>
