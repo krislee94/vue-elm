@@ -17,7 +17,7 @@
             class="iconfont icon-workstation icon-item"
             style="font-size: 30px"
           ></i>
-          <i class="text-sp">首页</i>
+          <i class="text-sp">发现</i>
         </div>
       </el-menu-item>
       <el-menu-item index="order" class="elm-item">
@@ -29,7 +29,7 @@
           <i class="text-sp">订单</i>
         </div>
       </el-menu-item>
-      <el-menu-item index="my" class="elm-item">
+      <el-menu-item index="mine" class="elm-item">
         <div class="icon-box">
           <i class="iconfont icon-person icon-item" style="font-size: 30px"></i>
           <i class="text-sp">我的</i>

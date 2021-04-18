@@ -1,17 +1,17 @@
 <template>
-  <h1>这是我的页</h1>
-  <Navigation />
+  <div>
+    <h1>这是我的页</h1>
+    <Navigation />
+  </div>
 </template>
 
 <script>
-import Navigation from "../../components/navigation.vue";
 import { defineComponent } from "vue";
+import Navigation from "../../components/navigation.vue";
 export default defineComponent({
+  components: { Navigation },
   name: "Mine",
   props: {},
-  components: {
-    Navigation,
-  },
   setup: () => {},
 });
 </script>

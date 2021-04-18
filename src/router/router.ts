@@ -58,8 +58,8 @@ const routes = [
       Promise.resolve().then(() => import("../pages/order/index.vue")),
   },
   {
-    path: "/my",
-    name: "My",
+    path: "/mine",
+    name: "Mine",
     meta: {
       title: "我的",
     },
