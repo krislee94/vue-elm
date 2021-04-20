@@ -66,6 +66,17 @@ const routes = [
     component: () =>
       Promise.resolve().then(() => import("../pages/mine/index.vue")),
   },
+  {
+    path: "/locationlist",
+    name: "LocationList",
+    meta: {
+      title: "定位",
+    },
+    component: () =>
+      Promise.resolve().then(
+        () => import("../pages/location/location-list.vue")
+      ),
+  },
 ];
 
 const router: Router = createRouter({
