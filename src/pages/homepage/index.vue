@@ -14,10 +14,11 @@
 </template>
 
 <script>
-// import { defineComponent } from "vue";
+import { onMounted } from "vue";
 import Navigation from "../../components/navigation.vue";
 import Location from "../location/index.vue";
 import { useRouter } from "vue-router";
+import axios from "../../utils/axios.ts";
 export default {
   name: "Home",
   components: {
@@ -38,6 +39,11 @@ export default {
     ////创建useRouter实例
     const router = new useRouter();
     console.log(router);
+    onMounted(() => {
+      axios.get("/api").then((res) => {
+        console.log(res);
+      });
+    });
     const gotoLocation = () => {
       console.log("去城市定位");
       router.push({ path: "locationlist" });
