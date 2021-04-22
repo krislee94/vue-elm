@@ -1,7 +1,9 @@
 import "element3/lib/theme-chalk/index.css";
 import Element3 from "element3";
 import router from "./router/router";
+import { Search, Icon } from "vant";
 import "./assets/icons/iconfont.css";
+import "vant/lib/index.css"; // 全局引入样式
 // import CONFIG from "./config";
 // import AmapVue from "@amap/amap-vue";
 
@@ -14,4 +16,4 @@ import App from "./App.vue";
 // AmapVue.config.version = "2.0";
 // AmapVue.config.key = CONFIG.GmapVue;
 
-createApp(App).use(router).use(Element3).mount("#app");
+createApp(App).use(router).use(Element3).use(Search).use(Icon).mount("#app");

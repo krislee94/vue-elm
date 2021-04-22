@@ -5,8 +5,28 @@
       <div @click="gotoLocation">
         <img src="../../assets/common/dingwei.png" class="dingwei" />
         <Location style="margin-left: 5px; color: #fff" />
-        <i class="iconfont icon-arrow-down icon-ding"></i>
+        <!-- <van-icon name="wap-nav" color="#fff" style="margin-top: 5px" /> -->
+
+        <van-icon
+          name="scan"
+          color="#fff"
+          size="1.2rem"
+          style="margin-left: 50vw"
+        />
+        <van-icon
+          name="chat-o"
+          badge="9"
+          color="#fff"
+          size="1.2rem"
+          style="margin-left: 5vw"
+        />
+        <i></i>
       </div>
+    </div>
+
+    <div class="body-box">
+      <!-- 搜索框 -->
+      <Search />
     </div>
     <!-- <i class="iconfont icon-gonggao"></i> -->
     <Navigation />
@@ -18,12 +38,14 @@ import { onMounted } from "vue";
 import Navigation from "../../components/navigation.vue";
 import Location from "../location/index.vue";
 import { useRouter } from "vue-router";
-import axios from "../../utils/axios.ts";
+// import axios from "../../utils/axios.ts";
+import Search from "./search.vue";
 export default {
   name: "Home",
   components: {
     Navigation,
     Location,
+    Search,
   },
   props: {},
   // data() {
@@ -40,9 +62,9 @@ export default {
     const router = new useRouter();
     console.log(router);
     onMounted(() => {
-      axios.get("/api").then((res) => {
-        console.log(res);
-      });
+      // axios.get("/").then((res) => {
+      //   console.log(res);
+      // });
     });
     const gotoLocation = () => {
       console.log("去城市定位");
@@ -66,6 +88,7 @@ export default {
   .m-l {
     margin-left: 5px;
   }
+  position: relative;
   .header-box {
     display: flex;
     flex-direction: row;
@@ -75,6 +98,9 @@ export default {
     width: 100%;
     height: 500px;
     border: 1px solid red;
+    position: absolute;
+    top: 0px;
+    z-index: 8;
     /** 渐变色  */
     background-image: linear-gradient(
       141deg,
@@ -94,6 +120,24 @@ export default {
       font-size: 6px;
       margin-left: 5px;
     }
+    .icon-scan {
+      // font-size: 20px;
+      color: #fff;
+    }
+  }
+  .body-box {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    border: 1px solid red;
+    position: absolute;
+    top: 400px;
+    z-index: 11;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    background-color: #fff;
+    /** 搜索框 */
   }
 }
 </style>

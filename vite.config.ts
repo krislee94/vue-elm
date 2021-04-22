@@ -3,11 +3,26 @@ import vue from "@vitejs/plugin-vue";
 // import path from "path";
 const path = require("path");
 import { resolve } from "path";
+import styleImport from "vite-plugin-style-import";
+
 console.log("**********", path.resolve(__dirname, "./src"));
 
 // https://vitejs.dev/config/config:
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    styleImport({
+      libs: [
+        {
+          libraryName: "vant",
+          esModule: true,
+          resolveStyle: (name) => {
+            return `vant/es/${name}/style`;
+          },
+        },
+      ],
+    }),
+  ],
   resolve: {
     alias: {
       "/@/": resolve(__dirname, "src"),
