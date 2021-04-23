@@ -27,7 +27,10 @@
     <div class="body-box">
       <!-- 搜索框 -->
       <Search />
+      <HotTag />
+      <SwiperHome />
     </div>
+
     <!-- <i class="iconfont icon-gonggao"></i> -->
     <Navigation />
   </div>
@@ -37,15 +40,19 @@
 import { onMounted } from "vue";
 import Navigation from "../../components/navigation.vue";
 import Location from "../location/index.vue";
+import HotTag from "./hot-tag.vue";
 import { useRouter } from "vue-router";
 // import axios from "../../utils/axios.ts";
 import Search from "./search.vue";
+import SwiperHome from "./swiper-home.vue";
 export default {
   name: "Home",
   components: {
     Navigation,
     Location,
     Search,
+    HotTag,
+    SwiperHome,
   },
   props: {},
   // data() {
