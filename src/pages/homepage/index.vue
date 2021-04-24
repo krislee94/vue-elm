@@ -29,6 +29,7 @@
       <Search />
       <HotTag />
       <SwiperHome />
+      <BigLogoCate />
     </div>
 
     <!-- <i class="iconfont icon-gonggao"></i> -->
@@ -45,6 +46,7 @@ import { useRouter } from "vue-router";
 // import axios from "../../utils/axios.ts";
 import Search from "./search.vue";
 import SwiperHome from "./swiper-home.vue";
+import BigLogoCate from "./big-log-cate.vue";
 export default {
   name: "Home",
   components: {
@@ -53,6 +55,7 @@ export default {
     Search,
     HotTag,
     SwiperHome,
+    BigLogoCate,
   },
   props: {},
   // data() {

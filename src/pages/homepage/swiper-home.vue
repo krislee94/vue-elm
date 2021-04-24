@@ -11,7 +11,8 @@
         :key="image"
         class="swiper-item"
       >
-        <img :src="image" fit="contain" />
+        <!-- <span>{{ image }}</span> -->
+        <img :src="image" fit="fill" class="image-box" />
       </van-swipe-item>
     </van-swipe>
   </div>
@@ -42,18 +43,20 @@ export default defineComponent({
 <style lang="less" scoped>
 .swiper-body {
   width: 100vw;
-  height: 15vh;
-  padding: 10vw 10vw 10vw 10vw;
+  height: 20vh;
   .swiper-home-box {
     display: flex;
     flex-direction: row;
   }
   .swiper-item {
-    width: 80vw;
-    height: 8vh;
-    image {
-      width: 80vw;
-      height: 10vh;
+    width: 100vw;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image-box {
+      width: 100vw;
+      height: 15vh;
     }
   }
 }
