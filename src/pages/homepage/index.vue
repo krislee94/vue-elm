@@ -30,8 +30,17 @@
       <HotTag />
       <SwiperHome />
       <BigLogoCate />
+      <LittleLogo />
+      <img src="/src/assets/images/guanggao.png" class="guanggao-img" />
+      <div class="bottom-box">
+        <!-- 天天特价 -->
+        <div class="daily-box"></div>
+        <!-- 免配专区 -->
+        <div class="free-box"></div>
+      </div>
     </div>
 
+    <FixedDiv />
     <!-- <i class="iconfont icon-gonggao"></i> -->
     <Navigation />
   </div>
@@ -47,6 +56,8 @@ import { useRouter } from "vue-router";
 import Search from "./search.vue";
 import SwiperHome from "./swiper-home.vue";
 import BigLogoCate from "./big-log-cate.vue";
+import LittleLogo from "./little-logo-cate.vue";
+import FixedDiv from "../../components/fix-bottom.vue";
 export default {
   name: "Home",
   components: {
@@ -56,6 +67,8 @@ export default {
     HotTag,
     SwiperHome,
     BigLogoCate,
+    LittleLogo,
+    FixedDiv,
   },
   props: {},
   // data() {
@@ -107,7 +120,7 @@ export default {
     padding: 100px 100px 100px 100px;
     width: 100%;
     height: 500px;
-    border: 1px solid red;
+    // border: 1px solid red;
     position: absolute;
     top: 0px;
     z-index: 8;
@@ -140,14 +153,39 @@ export default {
     flex-direction: column;
     width: 100vw;
     height: 80vh;
-    border: 1px solid red;
+    // border: 1px solid red;
     position: absolute;
     top: 400px;
     z-index: 11;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
     background-color: #fff;
+    overflow: auto;
     /** 搜索框 */
+
+    .guanggao-img {
+      width: 100vw;
+      height: 15vh;
+      margin-top: 5vh;
+    }
+    .bottom-box {
+      width: 100vw;
+      height: 20vh;
+      display: flex;
+      flex-direction: row;
+      margin-top: 1vh;
+      border: 1px solid red;
+      .daily-box {
+        width: 40vh;
+        height: 15vh;
+        border: 1px soild red;
+      }
+      .free-box {
+        width: 40vh;
+        height: 15vh;
+        border: 1px solid red;
+      }
+    }
   }
 }
 </style>

@@ -53,6 +53,7 @@ export default defineComponent({
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 999;
   .elm-box {
     display: flex;
     .elm-item {
