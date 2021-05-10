@@ -34,7 +34,9 @@
       <img src="/src/assets/images/guanggao.png" class="guanggao-img" />
       <div class="bottom-box">
         <!-- 天天特价 -->
-        <div class="daily-box"></div>
+        <div class="daily-box">
+          <DailyPrice />
+        </div>
         <!-- 免配专区 -->
         <div class="free-box"></div>
       </div>
@@ -58,6 +60,7 @@ import SwiperHome from "./swiper-home.vue";
 import BigLogoCate from "./big-log-cate.vue";
 import LittleLogo from "./little-logo-cate.vue";
 import FixedDiv from "../../components/fix-bottom.vue";
+import DailyPrice from "./daily-price.vue";
 export default {
   name: "Home",
   components: {
@@ -69,6 +72,7 @@ export default {
     BigLogoCate,
     LittleLogo,
     FixedDiv,
+    DailyPrice,
   },
   props: {},
   // data() {
