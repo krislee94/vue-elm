@@ -1,14 +1,17 @@
 <template>
   <div class="daily-box">
-    <van-count-down :time="time">
-      <template #default="timeData">
-        <span class="block">{{ timeData.hours }}</span>
-        <span class="colon">:</span>
-        <span class="block">{{ timeData.minutes }}</span>
-        <span class="colon">:</span>
-        <span class="block">{{ timeData.seconds }}</span>
-      </template>
-    </van-count-down>
+    <div class="daily-top-box">
+      <span class="daily-top-box-span">天天特价</span>
+      <van-count-down :time="time">
+        <template #default="timeData">
+          <span class="block">{{ timeData.hours }}</span>
+          <span class="colon">:</span>
+          <span class="block">{{ timeData.minutes }}</span>
+          <span class="colon">:</span>
+          <span class="block">{{ timeData.seconds }}</span>
+        </template>
+      </van-count-down>
+    </div>
   </div>
 </template>
 
@@ -45,6 +48,14 @@ export default defineComponent({
 <style lang="less" scoped>
 .daily-box {
   width: 50vw;
+  .daily-top-box {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 10px;
+    .daily-top-box-span {
+      margin-right: 40px;
+    }
+  }
 }
 .colon {
   display: inline-block;

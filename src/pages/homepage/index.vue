@@ -111,10 +111,11 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #fff;
+  background-color: #f5f5f5;
   .m-l {
     margin-left: 5px;
   }
+
   position: relative;
   .header-box {
     display: flex;
@@ -178,16 +179,20 @@ export default {
       display: flex;
       flex-direction: row;
       margin-top: 1vh;
-      border: 1px solid red;
+      border-radius: 40px;
+      background-color: #fff;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      // border: 1px solid red;
       .daily-box {
         width: 50vw;
         height: 15vh;
-        border: 1px soild red;
+        // border: 1px soild red;
       }
       .free-box {
         width: 50vw;
         height: 15vh;
-        border: 1px solid red;
+        // border: 1px solid red;
       }
     }
   }
