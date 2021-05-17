@@ -1,6 +1,14 @@
 <template>
   <div class="daily-box">
-    <h1>{{ title }}</h1>
+    <van-count-down :time="time">
+      <template #default="timeData">
+        <span class="block">{{ timeData.hours }}</span>
+        <span class="colon">:</span>
+        <span class="block">{{ timeData.minutes }}</span>
+        <span class="colon">:</span>
+        <span class="block">{{ timeData.seconds }}</span>
+      </template>
+    </van-count-down>
   </div>
 </template>
 
@@ -12,18 +20,44 @@ export default defineComponent({
   setup: () => {
     const state = reactive({
       title: "天天特价",
-      time: "", //这里的time ，需要从接口获取(YYYY-MM-DD HH:mm:ss) 和当前时间做换算
+      time: 20 * 60 * 60 * 1000,
+      timeData: {
+        hours: 4,
+        minutes: 60,
+        seconds: 60,
+      },
     });
 
-    //倒计时时间
-    const daoFun = () => {};
+    const setTime = () => {
+      this.state.timeData.hours = 1;
+      this.state.timeData.minutes = 30;
+      this.state.timeData.seconds = 40;
+    };
 
     return {
       ...toRefs(state),
+      setTime,
     };
   },
 });
 </script>
 
 <style lang="less" scoped>
+.daily-box {
+  width: 50vw;
+}
+.colon {
+  display: inline-block;
+  margin: 0 4px;
+  color: #ee0a24;
+}
+.block {
+  display: inline-block;
+  width: 150px;
+  color: #fff;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  background-color: #ee0a24;
+}
 </style>

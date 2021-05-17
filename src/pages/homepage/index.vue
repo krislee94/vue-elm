@@ -180,12 +180,12 @@ export default {
       margin-top: 1vh;
       border: 1px solid red;
       .daily-box {
-        width: 40vh;
+        width: 50vw;
         height: 15vh;
         border: 1px soild red;
       }
       .free-box {
-        width: 40vh;
+        width: 50vw;
         height: 15vh;
         border: 1px solid red;
       }
