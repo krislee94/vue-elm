@@ -1,7 +1,13 @@
 <template>
-  <div class="nav-box">
-    <!-- @select="handleSelect" -->
-    <el-menu class="elm-box" mode="horizontal" router="true">
+  <!-- <router-view /> -->
+  <!-- @select="handleSelect" -->
+  <van-tabbar v-model="active" @change="onChange" z-index="999">
+    <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item replace to="/find" icon="search">发现</van-tabbar-item>
+    <van-tabbar-item replace to="/order" icon="friends-o">订单</van-tabbar-item>
+    <van-tabbar-item replace to="/mine" icon="setting-o">我的</van-tabbar-item>
+  </van-tabbar>
+  <!-- <el-menu class="elm-box" mode="horizontal" router="true">
       <el-menu-item index="/" class="elm-item">
         <div class="icon-box">
           <i
@@ -35,16 +41,24 @@
           <i class="text-sp">我的</i>
         </div>
       </el-menu-item>
-    </el-menu>
-  </div>
+    </el-menu> -->
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 export default defineComponent({
   name: "Navigation",
   props: {},
-  setup: () => {},
+  setup: () => {
+    const active = ref(0);
+    const onChange = (index) => {
+      console.log(index);
+    };
+    return {
+      active,
+      onChange,
+    };
+  },
 });
 </script>
 

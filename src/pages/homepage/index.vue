@@ -34,7 +34,7 @@
       <img src="/src/assets/images/guanggao.png" class="guanggao-img" />
       <div class="bottom-box">
         <!-- 天天特价 -->
-        <div class="daily-box">
+        <div class="daily-bx">
           <DailyPrice />
         </div>
         <!-- 免配专区 -->
@@ -42,7 +42,6 @@
       </div>
     </div>
 
-    <FixedDiv />
     <!-- <i class="iconfont icon-gonggao"></i> -->
     <Navigation />
   </div>
@@ -59,7 +58,6 @@ import Search from "./search.vue";
 import SwiperHome from "./swiper-home.vue";
 import BigLogoCate from "./big-log-cate.vue";
 import LittleLogo from "./little-logo-cate.vue";
-import FixedDiv from "../../components/fix-bottom.vue";
 import DailyPrice from "./daily-price.vue";
 export default {
   name: "Home",
@@ -71,7 +69,6 @@ export default {
     SwiperHome,
     BigLogoCate,
     LittleLogo,
-    FixedDiv,
     DailyPrice,
   },
   props: {},
@@ -110,7 +107,7 @@ export default {
 .home-box {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 120vh;
   background-color: #f5f5f5;
   .m-l {
     margin-left: 5px;
@@ -157,7 +154,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 80vh;
+    // height: 80vh;
     // border: 1px solid red;
     position: absolute;
     top: 400px;
@@ -184,9 +181,9 @@ export default {
       padding-left: 2vw;
       padding-right: 2vw;
       // border: 1px solid red;
-      .daily-box {
+      .daily-bx {
         width: 50vw;
-        height: 15vh;
+        height: 20vh;
         // border: 1px soild red;
       }
       .free-box {

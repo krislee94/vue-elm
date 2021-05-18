@@ -48,6 +48,11 @@ export default defineComponent({
 <style lang="less" scoped>
 .daily-box {
   width: 50vw;
+  border: 1px solid red;
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  padding: 40px 40px;
+  height: 20vh;
   .daily-top-box {
     display: flex;
     flex-direction: row;

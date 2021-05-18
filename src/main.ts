@@ -1,7 +1,15 @@
 import "element3/lib/theme-chalk/index.css";
 import Element3 from "element3";
 import router from "./router/router";
-import { Search, Icon, Swipe, SwipeItem, CountDown } from "vant"; //全局注册组件
+import {
+  Search,
+  Icon,
+  Swipe,
+  SwipeItem,
+  CountDown,
+  Tabbar,
+  TabbarItem,
+} from "vant"; //全局注册组件
 import "./assets/icons/iconfont.css";
 import "vant/lib/index.css"; // 全局引入样式
 // import CONFIG from "./config";
@@ -24,4 +32,6 @@ createApp(App)
   .use(Swipe)
   .use(SwipeItem)
   .use(CountDown)
+  .use(Tabbar)
+  .use(TabbarItem)
   .mount("#app");
