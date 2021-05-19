@@ -12,14 +12,19 @@
         </template>
       </van-count-down>
     </div>
+    <GoodItem />
   </div>
 </template>
 
 <script>
 import { defineComponent, reactive, toRefs } from "vue";
+import GoodsItem from "./goods-item.vue";
 export default defineComponent({
   name: "DailyPrice",
   props: {},
+  components: {
+    GoodsItem,
+  },
   setup: () => {
     const state = reactive({
       title: "天天特价",
@@ -48,6 +53,8 @@ export default defineComponent({
 <style lang="less" scoped>
 .daily-box {
   width: 50vw;
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
   background-color: #f5f5f5;
   border-radius: 40px;
