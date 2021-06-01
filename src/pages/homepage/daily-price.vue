@@ -12,7 +12,7 @@
         </template>
       </van-count-down>
     </div>
-    <GoodItem />
+    <GoodsItem></GoodsItem>
   </div>
 </template>
 
@@ -59,7 +59,7 @@ export default defineComponent({
   background-color: #f5f5f5;
   border-radius: 40px;
   padding: 40px 40px;
-  height: 20vh;
+  height: 24vh;
   .daily-top-box {
     display: flex;
     flex-direction: row;
