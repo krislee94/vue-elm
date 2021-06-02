@@ -10,6 +10,7 @@
     "@amap/amap-vue": "^2.0.12",
     "@types/node": "^14.14.35",
     "axios": "^0.21.1",
+    "better-scroll": "^2.3.1",
     "blueimp-md5": "^2.18.0",
     "element3": "0.0.39",
     "http-proxy": "^1.18.1",
