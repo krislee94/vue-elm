@@ -9,6 +9,7 @@ import {
   CountDown,
   Tabbar,
   TabbarItem,
+  List,
 } from "vant"; //全局注册组件
 import "./assets/icons/iconfont.css";
 import "vant/lib/index.css"; // 全局引入样式
@@ -34,4 +35,5 @@ createApp(App)
   .use(CountDown)
   .use(Tabbar)
   .use(TabbarItem)
+  .use(List)
   .mount("#app");
