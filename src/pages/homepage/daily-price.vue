@@ -12,13 +12,14 @@
         </template>
       </van-count-down>
     </div>
-    <GoodsItem></GoodsItem>
+    <GoodsItem :itemInfos="itemInfos"></GoodsItem>
   </div>
 </template>
 
 <script>
 import { defineComponent, reactive, toRefs } from "vue";
 import GoodsItem from "./goods-item.vue";
+import data from "../../mock/index";
 export default defineComponent({
   name: "DailyPrice",
   props: {},
@@ -34,8 +35,9 @@ export default defineComponent({
         minutes: 60,
         seconds: 60,
       },
+      itemInfos: data.itemMockData,
     });
-
+    console.log(data.itemInfos);
     const setTime = () => {
       this.state.timeData.hours = 1;
       this.state.timeData.minutes = 30;

@@ -12,18 +12,24 @@
 
 <script>
 import { defineComponent, reactive, toRefs } from "vue";
-import data from "../../mock/index";
+
 export default defineComponent({
   name: "GoodsItem",
-  props: {},
-  setup: () => {
-    const state = reactive({
-      itemInfos: data.itemMockData, //这里用默认的值
-    });
-
-    return {
-      ...toRefs(state),
-    };
+  props: {
+    itemInfos: {
+      type: Object,
+      default: "",
+    },
+  },
+  setup: (props, ctx) => {
+    console.log("-----", props);
+    console.log(ctx);
+    // const state = reactive({
+    //   itemInfos: data.itemMockData, //这里用默认的值
+    // });
+    // return {
+    //   ...toRefs(state),
+    // };
   },
 });
 </script>
