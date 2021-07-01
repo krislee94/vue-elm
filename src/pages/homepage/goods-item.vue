@@ -38,7 +38,7 @@ export default defineComponent({
 .goods-item-box {
   width: 45vw;
   height: 41vw;
-  // border: 1px solid red;
+  //
   border-radius: 50px;
   display: flex;
   flex-direction: column;

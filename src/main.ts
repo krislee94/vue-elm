@@ -13,6 +13,7 @@ import {
 } from "vant"; //全局注册组件
 import "./assets/icons/iconfont.css";
 import "vant/lib/index.css"; // 全局引入样式
+import Vuex from "vuex";
 // import CONFIG from "./config";
 // import AmapVue from "@amap/amap-vue";
 
@@ -23,7 +24,7 @@ import App from "./App.vue";
 
 //使用高德的配置
 // AmapVue.config.version = "2.0";
-// AmapVue.config.key = CONFIG.GmapVue;
+// AmapVue.config.key = CONFIbG.GmapVue;
 
 createApp(App)
   .use(router)

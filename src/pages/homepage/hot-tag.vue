@@ -28,7 +28,7 @@ export default defineComponent({
 #hot-box {
   width: 100vw;
   height: 5vh;
-  // border: 1px solid red;
+  //
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,7 +39,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: center;
-    // border: 1px solid red;
+    //
     border-radius: 30vw;
     background-color: #f2f2f2;
     color: #333;

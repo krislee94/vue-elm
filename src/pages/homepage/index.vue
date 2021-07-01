@@ -38,7 +38,9 @@
           <DailyPrice />
         </div>
         <!-- 免配专区 -->
-        <div class="free-box"></div>
+        <div class="free-box">
+          <NiceChoice />
+        </div>
       </div>
     </div>
 
@@ -59,6 +61,7 @@ import SwiperHome from "./swiper-home.vue";
 import BigLogoCate from "./big-log-cate.vue";
 import LittleLogo from "./little-logo-cate.vue";
 import DailyPrice from "./daily-price.vue";
+import NiceChoice from "./nice-choice.vue";
 export default {
   name: "Home",
   components: {
@@ -70,6 +73,7 @@ export default {
     BigLogoCate,
     LittleLogo,
     DailyPrice,
+    NiceChoice,
   },
   props: {},
   // data() {
@@ -122,7 +126,7 @@ export default {
     padding: 100px 100px 100px 100px;
     width: 100%;
     height: 500px;
-    // border: 1px solid red;
+    //
     position: absolute;
     top: 0px;
     z-index: 8;
@@ -155,7 +159,7 @@ export default {
     flex-direction: column;
     width: 100vw;
     // height: 80vh;
-    // border: 1px solid red;
+    //
     position: absolute;
     top: 400px;
     z-index: 11;
@@ -180,16 +184,16 @@ export default {
       background-color: #fff;
       padding-left: 2vw;
       padding-right: 2vw;
-      // border: 1px solid red;
+      //
       .daily-bx {
         width: 50vw;
-        height: 20vh;
+        height: 24vh;
         // border: 1px soild red;
       }
       .free-box {
         width: 50vw;
-        height: 15vh;
-        // border: 1px solid red;
+        height: 24vh;
+        //
       }
     }
   }

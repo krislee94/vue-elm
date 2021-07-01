@@ -57,7 +57,7 @@ export default defineComponent({
   width: 50vw;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  //
   background-color: #f5f5f5;
   border-radius: 40px;
   padding: 40px 40px;
